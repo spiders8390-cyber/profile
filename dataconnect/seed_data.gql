@@ -1,0 +1,90 @@
+mutation SeedDemoData @transaction @auth(level: USER, insecureReason: "This is seed data intended for a logged-in user to populate their initial portfolio, not for public use.") {
+  user_insertMany(data: [
+    {
+      id: "b45a05b3-2c1a-4d2d-8b0f-8f8d9b8d9b8d",
+      username: "johndoe",
+      email: "john.doe@example.com",
+      displayName: "John Doe",
+      bio: "An aspiring developer building a portfolio.",
+      profilePictureUrl: "https://example.com/johndoe.jpg",
+      websiteUrl: "https://johndoe.dev",
+      createdAt: "2023-01-01T10:00:00Z"
+    }
+  ])
+  portfolio_insertMany(data: [
+    {
+      id: "d9e8c7b6-a5f4-3d2c-1b0a-9e8d7c6b5a4f",
+      userId: "b45a05b3-2c1a-4d2d-8b0f-8f8d9b8d9b8d",
+      name: "My First Portfolio",
+      description: "A collection of my recent projects.",
+      themeSettings: "light",
+      createdAt: "2023-01-15T12:00:00Z"
+    }
+  ])
+  project_insertMany(data: [
+    {
+      id: "a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
+      portfolioId: "d9e8c7b6-a5f4-3d2c-1b0a-9e8d7c6b5a4f",
+      title: "Portfolio Website Redesign",
+      description: "A complete redesign of my personal portfolio website.",
+      tags: ["web development", "react", "design"],
+      isPublic: true,
+      createdAt: "2023-02-01T09:30:00Z"
+    },
+    {
+      id: "f7e6d5c4-b3a2-1f0e-9d8c-7b6a5f4e3d2c",
+      portfolioId: "d9e8c7b6-a5f4-3d2c-1b0a-9e8d7c6b5a4f",
+      title: "Mobile App for Task Management",
+      description: "Developed a cross-platform mobile app for task organization.",
+      tags: ["mobile development", "flutter", "productivity"],
+      isPublic: true,
+      createdAt: "2023-03-10T14:00:00Z"
+    }
+  ])
+  mediaItem_insertMany(data: [
+    {
+      projectId: "a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
+      mediaUrl: "https://example.com/portfolio-redesign-screenshot1.png",
+      mediaType: "image/png",
+      caption: "Homepage screenshot of the redesigned portfolio.",
+      orderIndex: 1,
+      isFeatured: true,
+      createdAt: "2023-02-05T10:00:00Z"
+    },
+    {
+      projectId: "a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
+      mediaUrl: "https://example.com/portfolio-redesign-screenshot2.png",
+      mediaType: "image/png",
+      caption: "Project details page.",
+      orderIndex: 2,
+      isFeatured: false,
+      createdAt: "2023-02-06T11:00:00Z"
+    },
+    {
+      projectId: "f7e6d5c4-b3a2-1f0e-9d8c-7b6a5f4e3d2c",
+      mediaUrl: "https://example.com/task-app-promo.mp4",
+      mediaType: "video/mp4",
+      caption: "Promotional video for the task management app.",
+      orderIndex: 1,
+      isFeatured: true,
+      createdAt: "2023-03-15T10:00:00Z"
+    }
+  ])
+  analyticsEvent_insertMany(data: [
+    {
+      portfolioId: "d9e8c7b6-a5f4-3d2c-1b0a-9e8d7c6b5a4f",
+      eventType: "PAGE_VIEW",
+      timestamp: "2023-04-01T08:00:00Z",
+      viewerIpAddress: "192.168.1.1",
+      viewerUserAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+    },
+    {
+      portfolioId: "d9e8c7b6-a5f4-3d2c-1b0a-9e8d7c6b5a4f",
+      projectId: "a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
+      eventType: "PROJECT_VIEW",
+      timestamp: "2023-04-01T08:15:00Z",
+      viewerIpAddress: "192.168.1.1",
+      viewerUserAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+    }
+  ])
+}

@@ -1,0 +1,91 @@
+[data-theme="light"] {
+  --bg-primary: #3b82f6;
+  --bg-secondary: #10b981;
+  --bg-accent: #f59e0b;
+  --bg-white: #ffffff;
+  --bg-glass: rgba(255, 255, 255, 0.85);
+  --text-dark: #0f172a;
+  --text-muted: #475569;
+  --hero-bg: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #f1f5f9 100%);
+  --glass-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --border-glass: 1px solid rgba(0, 0, 0, 0.04);
+  background: #ffffff;
+  color: var(--text-dark);
+}
+
+[data-theme="light"] .navbar {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .glass-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+}
+
+[data-theme="light"] .hero-bg {
+  background: var(--hero-bg);
+}
+
+[data-theme="light"] footer {
+  background-color: #ffffff !important;
+  color: var(--text-dark);
+  box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .stats-number {
+  background: linear-gradient(var(--bg-primary), var(--bg-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-theme="light"] .text-light {
+  color: var(--text-dark) !important;
+}
+
+[data-theme="light"] h1, [data-theme="light"] h2, [data-theme="light"] h3, [data-theme="light"] h4, [data-theme="light"] h5 {
+  color: var(--text-dark);
+}
+
+[data-theme="light"] .lead, [data-theme="light"] p {
+  color: #475569;
+}
+
+[data-theme="light"] .navbar-brand {
+  color: var(--text-dark) !important;
+}
+
+[data-theme="light"] .nav-link {
+  color: var(--text-dark) !important;
+}
+
+[data-theme="light"] .nav-link:hover {
+  color: var(--bg-primary) !important;
+}
+
+[data-theme="light"] #particles-js {
+  opacity: 0.3;
+}
+
+[data-theme="light"] .btn-outline-light {
+  border-color: var(--text-dark);
+  color: var(--text-dark);
+}
+
+[data-theme="light"] .btn-outline-light:hover {
+  background: var(--text-dark);
+  color: white;
+}
+
+[data-theme="light"] .opacity-75, [data-theme="light"] .opacity-90 {
+  opacity: 0.9;
+}
+
+[data-theme="light"] .modal-content {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: var(--text-dark);
+}

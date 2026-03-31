@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Mahmoud | Modern Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+    <link href="css/light-theme.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+</head>
+<body data-theme="dark">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="index.html">
+                <i class="fas fa-rocket me-2"></i>Mahmoud
+            </a>
+            <button class="navbar-toggler glass-card p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+                <i class="fas fa-bars text-light fs-4"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link glass-card px-4 py-2 mx-2 rounded-pill" href="index.html#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link glass-card px-4 py-2 mx-2 rounded-pill" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active glass-card px-4 py-2 mx-2 rounded-pill" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link glass-card px-4 py-2 mx-2 rounded-pill" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button id="theme-toggle" class="btn glass-card ms-2 p-2 rounded-circle" title="Toggle Theme">
+                            <i class="fas fa-sun fs-5" id="theme-icon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Projects Hero -->
+    <section class="min-vh-100 d-flex align-items-center py-5" style="padding-top: 100px; background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);">
+        <div class="container text-center text-white">
+            <h1 class="display-2 fw-bold mb-4" data-aos="fade-down">My Portfolio</h1>
+            <p class="lead fs-3 opacity-90 mb-5" data-aos="fade-up" data-aos-delay="200">Showcasing my best work. Each project represents real-world problem solving with modern technologies.</p>
+            <div class="row justify-content-center g-3 mb-5" data-aos="fade-up" data-aos-delay="400">
+                <div class="col-auto">
+                    <span class="badge glass-card fs-5 px-4 py-3 shadow-lg">
+                        <i class="fas fa-project-diagram me-2 text-primary"></i>25+ Projects
+                    </span>
+                </div>
+                <div class="col-auto">
+                    <span class="badge glass-card fs-5 px-4 py-3 shadow-lg">
+                        <i class="fas fa-star me-2 text-warning"></i>5-Star Rating
+                    </span>
+                </div>
+                <div class="col-auto">
+                    <span class="badge glass-card fs-5 px-4 py-3 shadow-lg">
+                        <i class="fas fa-clock me-2 text-success"></i>Delivered On Time
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filterable Projects -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold text-light mb-4" data-aos="fade-up">Featured Projects</h2>
+                <div class="filter-buttons d-flex justify-content-center flex-wrap gap-2 mb-5" data-aos="fade-up" data-aos-delay="200">
+                    <button class="filter-btn active" data-filter="all" title="Show all projects">
+                        <i class="fas fa-th me-1"></i>All
+                    </button>
+                    <button class="filter-btn" data-filter="web" title="Web applications">
+                        <i class="fas fa-globe me-1"></i>Web
+                    </button>
+                    <button class="filter-btn" data-filter="mobile" title="Mobile apps">
+                        <i class="fas fa-mobile-alt me-1"></i>Mobile
+                    </button>
+                    <button class="filter-btn" data-filter="design" title="UI/UX design">
+                        <i class="fas fa-paint-brush me-1"></i>Design
+                    </button>
+                    <button class="filter-btn" data-filter="ecommerce" title="E-commerce">
+                        <i class="fas fa-shopping-cart me-1"></i>E-Commerce
+                    </button>
+                </div>
+            </div>
+            <div class="project-grid" id="projectGrid">
+                <!-- Featured Project 1 -->
+                <div class="project-item glass-card shadow-lg overflow-hidden cursor-pointer" data-categories="web ecommerce" data-toggle="modal" data-target="#projectModal1">
+                    <div class="position-relative overflow-hidden">
+                        <img src="./images/img/eco.png" class="w-100 project-img" alt="E-Commerce Platform" style="height: 250px; object-fit: cover;">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h4 class="text-white fw-bold mb-2">E-Commerce Pro</h4>
+                                <p class="opacity-90 mb-3">Full-stack e-commerce platform with payment integration</p>
+                                <div class="d-flex gap-2">
+                                    <span class="badge bg-primary">React</span>
+                                    <span class="badge bg-success">Node.js</span>
+                                    <span class="badge bg-info">MongoDB</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Project 2 -->
+                <div class="project-item glass-card shadow-lg overflow-hidden cursor-pointer" data-categories="web design" data-toggle="modal" data-target="#projectModal2">
+                    <div class="position-relative overflow-hidden">
+                        <img src="./images/img/task.png" class="w-100 project-img" alt="Task Management" style="height: 250px; object-fit: cover;">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h4 class="text-white fw-bold mb-2">TaskMaster Pro</h4>
+                                <p class="opacity-90 mb-3">Real-time collaborative task management with drag & drop</p>
+                                <div class="d-flex gap-2">
+                                    <span class="badge bg-warning">Vue.js</span>
+                                    <span class="badge bg-success">Socket.io</span>
+                                    <span class="badge bg-primary">Firebase</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More projects... (9 total) -->
+                <div class="project-item glass-card shadow-lg overflow-hidden cursor-pointer" data-categories="mobile" data-toggle="modal" data-target="#projectModal3">
+                    <img src="./images/img/mobile app.png" class="w-100 project-img" alt="Mobile Banking" style="height: 250px; object-fit: cover;">
+                    <div class="project-overlay">
+                        <h4 class="text-white fw-bold mb-2">Mobile Banking App</h4>
+                        <p class="opacity-90 mb-3">React Native banking app with biometric authentication</p>
+                        <div class="d-flex gap-2">
+                            <span class="badge bg-danger">React Native</span>
+                            <span class="badge bg-info">Expo</span>
+                            <span class="badge bg-success">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item glass-card shadow-lg overflow-hidden cursor-pointer" data-categories="web" data-toggle="modal" data-target="#projectModal4">
+                    <img src="./images/img/protfolio.png" class="w-100 project-img" alt="Portfolio 2024" style="height: 250px; object-fit: cover;">
+                    <div class="project-overlay">
+                        <h4 class="text-white fw-bold mb-2">Portfolio 2024</h4>
+                        <p class="opacity-90 mb-3">This website! Glassmorphism design with particles.js</p>
+                        <div class="d-flex gap-2">
+                            <span class="badge bg-primary">HTML/CSS/JS</span>
+                            <span class="badge bg-info">Bootstrap 5</span>
+                            <span class="badge bg-warning">Particles.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item glass-card shadow-lg overflow-hidden cursor-pointer" data-categories="design" data-toggle="modal" data-target="#projectModal5">
+                    <img src="./images/img/landing.png" class="w-100 project-img" alt="Landing Pages" style="height: 250px; object-fit: cover;">
+                    <div class="project-overlay">
+                        <h4 class="text-white fw-bold mb-2">Landing Page Series</h4>
+                        <p class="opacity-90 mb-3">10+ high-converting landing pages with animations</p>
+                        <div class="d-flex gap-2">
+                            <span class="badge bg-success">GSAP</span>
+                            <span class="badge bg-warning">Three.js</span>
+                            <span class="badge bg-primary">Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional 4 projects for 9 total -->
+                <div class="project-item glass-card shadow-lg overflow-hidden cursor-pointer" data-categories="ecommerce" data-toggle="modal" data-target="#projectModal6">
+                    <img src="./images/img/food app.png" class="w-100 project-img" alt="Food Delivery" style="height: 250px; object-fit: cover;">
+                    <div class="project-overlay">
+                        <h4 class="text-white fw-bold mb-2">Food Delivery App</h4>
+                        <p class="opacity-90 mb-3">Complete food ordering system with real-time tracking</p>
+                        <div class="d-flex gap-2">
+                            <span class="badge bg-danger">Next.js</span>
+                            <span class="badge bg-success">Stripe</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class=" project-item glass-card shadow-lg overflow-hidden cursor-pointer" data-categories="web" data-toggle="modal" data-target="#projectModal7">
+                    <img src="./images/img/admin dashbord.png" class="w-100 project-img" alt="Admin Dashboard" style="height: 250px; object-fit: cover;">
+                    <div class="project-overlay">
+                        <h4 class="text-white fw-bold mb-2">Admin Dashboard</h4>
+                        <p class="opacity-90 mb-3">Advanced analytics dashboard with charts and graphs</p>
+                        <div class="d-flex gap-2">
+                            <span class="badge bg-primary">Chart.js</span>
+                            <span class="badge bg-info">TypeScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item glass-card shadow-lg overflow-hidden cursor-pointer" data-categories="mobile" data-toggle="modal" data-target="#projectModal8">
+                    <img src="./images/img/fintess.png" class="w-100 project-img" alt="Fitness App" style="height: 250px; object-fit: cover;">
+                    <div class="project-overlay">
+                        <h4 class="text-white fw-bold mb-2">Fitness Tracker</h4>
+                        <p class="opacity-90 mb-3">Complete fitness app with workout tracking and social features</p>
+                        <div class="d-flex gap-2">
+                            <span class="badge bg-warning">Flutter</span>
+                            <span class="badge bg-success">Firebase</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item glass-card shadow-lg overflow-hidden cursor-pointer" data-categories="design" data-toggle="modal" data-target="#projectModal9">
+                    <img src="./images/img/3d protfolio.png" class="w-100 project-img" alt="3D Portfolio" style="height: 250px; object-fit: cover;">
+                    <div class="project-overlay">
+                        <h4 class="text-white fw-bold mb-2">3D Portfolio Experience</h4>
+                        <p class="opacity-90 mb-3">Interactive 3D portfolio using Three.js and WebGL</p>
+                        <div class="d-flex gap-2">
+                            <span class="badge bg-danger">Three.js</span>
+                            <span class="badge bg-primary">GSAP</span>
+                            <span class="badge bg-info">React Three Fiber</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modals (Example for first project - repeat pattern for others) -->
+    <div class="modal fade" id="projectModal1" tabindex="-1">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content glass-card">
+                <div class="modal-header border-0">
+                    <h3 class="modal-title fw-bold text-primary">E-Commerce Pro Platform</h3>
+                    <button type="button" class="btn-close btn-close-white glass-card rounded-circle p-2" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <img src="./images/img/eco.png" class="w-100" style="height: 400px; object-fit: cover;" alt="Project Demo">
+                    <div class="p-5">
+                        <h4 class="fw-bold mb-3">Project Overview</h4>
+                        <p class="lead opacity-90 mb-4">Complete e-commerce solution with advanced features including real-time inventory, payment gateway integration, admin dashboard, and mobile-responsive design.</p>
+                        
+                        <h6 class="fw-bold text-primary mb-3">Technologies Used</h6>
+                        <div class="d-flex flex-wrap gap-2 mb-4">
+                            <span class="badge bg-primary fs-6 px-3 py-2">React 18</span>
+                            <span class="badge bg-success fs-6 px-3 py-2">Node.js</span>
+                            <span class="badge bg-info fs-6 px-3 py-2">MongoDB</span>
+                            <span class="badge bg-warning fs-6 px-3 py-2">Stripe API</span>
+                            <span class="badge bg-danger fs-6 px-3 py-2">Redux Toolkit</span>
+                            <span class="badge bg-secondary fs-6 px-3 py-2">Tailwind CSS</span>
+                        </div>
+                        
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <h6 class="fw-bold mb-3">Key Features</h6>
+                                <ul class="opacity-90">
+                                    <li>Real-time product search with filters</li>
+                                    <li>Advanced shopping cart with persistence</li>
+                                    <li>Payment processing with multiple gateways</li>
+                                    <li>Order tracking and management dashboard</li>
+                                    <li>Admin panel for inventory management</li>
+                                    <li>PWA capabilities for offline usage</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h6 class="fw-bold mb-3">Results</h6>
+                                <ul class="opacity-90">
+                                    <li>60% increase in conversion rate</li>
+                                    <li>Lighthouse Performance Score: 98</li>
+                                    <li>Load time under 1.5 seconds</li>
+                                    <li>100% mobile responsive</li>
+                                    <li>200% increase in organic traffic</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex gap-3 mt-5">
+                            <a href="#" class="btn btn-primary glass-card px-4 py-2 flex-fill">
+                                <i class="fas fa-external-link-alt me-2"></i>Live Demo
+                            </a>
+                            <a href="#" class="btn btn-outline-light glass-card px-4 py-2">
+                                <i class="fab fa-github me-2"></i>View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Project Modal 2: TaskMaster Pro -->
+    <div class="modal fade" id="projectModal2" tabindex="-1">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content glass-card">
+                <div class="modal-header border-0">
+                    <h3 class="modal-title fw-bold text-primary">TaskMaster Pro</h3>
+                    <button type="button" class="btn-close btn-close-white glass-card rounded-circle p-2" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <img src="./images/img/task.png" class="w-100" style="height: 400px; object-fit: cover;" alt="Project Demo">
+                    <div class="p-5">
+                        <h4 class="fw-bold mb-3">Project Overview</h4>
+                        <p class="lead opacity-90 mb-4">Advanced real-time collaborative task management platform with drag & drop kanban boards, team synchronization, and productivity analytics.</p>
+                        
+                        <h6 class="fw-bold text-primary mb-3">Technologies Used</h6>
+                        <div class="d-flex flex-wrap gap-2 mb-4">
+                            <span class="badge bg-warning fs-6 px-3 py-2">Vue.js 3</span>
+                            <span class="badge bg-success fs-6 px-3 py-2">Socket.io</span>
+                            <span class="badge bg-primary fs-6 px-3 py-2">Firebase</span>
+                            <span class="badge bg-info fs-6 px-3 py-2">Pinia</span>
+                            <span class="badge bg-danger fs-6 px-3 py-2">Vuetify</span>
+                        </div>
+                        
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <h6 class="fw-bold mb-3">Key Features</h6>
+                                <ul class="opacity-90">
+                                    <li>Real-time multi-user collaboration</li>
+                                    <li>Drag & drop kanban boards</li>
+                                    <li>Push notifications & mentions</li>
+                                    <li>Team workspaces & permissions</li>
+                                    <li>Time tracking & productivity analytics</li>
+                                    <li>Offline support with sync</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h6 class="fw-bold mb-3">Results</h6>
+                                <ul class="opacity-90">
+                                    <li>75% increase in team productivity</li>
+                                    <li>App Store rating: 4.9/5</li>
+                                    <li>Page load time: 2 seconds</li>
+                                    <li>99.9% uptime reliability</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex gap-3 mt-5">
+                            <a href="#" class="btn btn-primary glass-card px-4 py-2 flex-fill">
+                                <i class="fas fa-external-link-alt me-2"></i>Live Demo
+                            </a>
+                            <a href="#" class="btn btn-outline-light glass-card px-4 py-2">
+                                <i class="fab fa-github me-2"></i>View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Modal 3: Mobile Banking App -->
+    <div class="modal fade" id="projectModal3" tabindex="-1">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content glass-card">
+                <div class="modal-header border-0">
+                    <h3 class="modal-title fw-bold text-primary">Mobile Banking App</h3>
+                    <button type="button" class="btn-close btn-close-white glass-card rounded-circle p-2" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <img src="./images/img/mobile app.png" class="w-100" style="height: 400px; object-fit: cover;" alt="Project Demo">
+                    <div class="p-5">
+                        <h4 class="fw-bold mb-3">Project Overview</h4>
+                        <p class="lead opacity-90 mb-4">Cross-platform mobile banking application with biometric authentication, real-time transactions, and comprehensive financial management tools.</p>
+                        
+                        <h6 class="fw-bold text-primary mb-3">Technologies Used</h6>
+                        <div class="d-flex flex-wrap gap-2 mb-4">
+                            <span class="badge bg-danger fs-6 px-3 py-2">React Native</span>
+                            <span class="badge bg-info fs-6 px-3 py-2">Expo</span>
+                            <span class="badge bg-success fs-6 px-3 py-2">Node.js</span>
+                            <span class="badge bg-warning fs-6 px-3 py-2">Redux</span>
+                            <span class="badge bg-primary fs-6 px-3 py-2">GraphQL</span>
+                        </div>
+                        
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <h6 class="fw-bold mb-3">Key Features</h6>
+                                <ul class="opacity-90">
+                                    <li>Face ID & fingerprint authentication</li>
+                                    <li>Push notifications for transactions</li>
+                                    <li>QR code payments & transfers</li>
+                                    <li>Real-time balance & spending tracking</li>
+                                    <li>Digital wallet & card management</li>
+                                    <li>Complete offline functionality</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h6 class="fw-bold mb-3">Results</h6>
+                                <ul class="opacity-90">
+                                    <li>95% biometric auth success rate</li>
+                                    <li>App Store rating: 4.8/5</li>
+                                    <li>Full offline transaction support</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex gap-3 mt-5">
+                            <a href="#" class="btn btn-primary glass-card px-4 py-2 flex-fill">
+                                <i class="fas fa-external-link-alt me-2"></i>Live Demo
+                            </a>
+                            <a href="#" class="btn btn-outline-light glass-card px-4 py-2">
+                                <i class="fab fa-github me-2"></i>View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Modal 4: Portfolio 2024 -->
+    <div class="modal fade" id="projectModal4" tabindex="-1">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content glass-card">
+                <div class="modal-header border-0">
+                    <h3 class="modal-title fw-bold text-primary">Portfolio 2024</h3>
+                    <button type="button" class="btn-close btn-close-white glass-card rounded-circle p-2" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <img src="./images/img/protfolio.png" class="w-100" style="height: 400px; object-fit: cover;" alt="Project Demo">
+                    <div class="p-5">
+                        <h4 class="fw-bold mb-3">Project Overview</h4>
+                        <p class="lead opacity-90 mb-4">This very website! Modern glassmorphism portfolio with advanced animations, particle effects, and seamless user experience across all devices.</p>
+                        
+                        <h6 class="fw-bold text-primary mb-3">Technologies Used</h6>
+                        <div class="d-flex flex-wrap gap-2 mb-4">
+                            <span class="badge bg-primary fs-6 px-3 py-2">HTML5/CSS3/JS</span>
+                            <span class="badge bg-info fs-6 px-3 py-2">Bootstrap 5</span>
+                            <span class="badge bg-warning fs-6 px-3 py-2">Particles.js</span>
+                            <span class="badge bg-success fs-6 px-3 py-2">AOS Animations</span>
+                        </div>
+                        
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <h6 class="fw-bold mb-3">Key Features</h6>
+                                <ul class="opacity-90">
+                                    <li>Glassmorphism design system</li>
+                                    <li>Smooth scrolling & parallax</li>
+                                    <li>Filterable project gallery</li>
+                                    <li>Dark/light theme toggle</li>
+                                    <li>AOS scroll animations</li>
+                                    <li>Fully responsive design</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h6 class="fw-bold mb-3">Results</h6>
+                                <ul class="opacity-90">
+                                    <li>Lighthouse Performance: 98/100</li>
+                                    <li>Average load time: 1.2 seconds</li>
+                                    <li>100% mobile responsive</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex gap-3 mt-5">
+                            <a href="index.html" class="btn btn-primary glass-card px-4 py-2 flex-fill">
+                                <i class="fas fa-external-link-alt me-2"></i>Live Demo
+                            </a>
+                            <a href="#" class="btn btn-outline-light glass-card px-4 py-2">
+                                <i class="fab fa-github me-2"></i>View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Modal 5: Landing Page Series -->
+    <div class="modal fade" id="projectModal5" tabindex="-1">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content glass-card">
+                <div class="modal-header border-0">
+                    <h3 class="modal-title fw-bold text-primary">Landing Page Series</h3>
+                    <button type="button" class="btn-close btn-close-white glass-card rounded-circle p-2" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <img src="./images/img/landing.png" class="w-100" style="height: 400px; object-fit: cover;" alt="Project Demo">
+                    <div class="p-5">
+                        <h4 class="fw-bold mb-3">Project Overview</h4>
+                        <p class="lead opacity-90 mb-4">Collection of 10+ high-performance landing pages featuring advanced scroll-triggered animations, parallax effects, and conversion-optimized design patterns.</p>
+                        
+                        <h6 class="fw-bold text-primary mb-3">Technologies Used</h6>
+                        <div class="d-flex flex-wrap gap-2 mb-4">
+                            <span class="badge bg-success fs-6 px-3 py-2">GSAP 3</span>
+                            <span class="badge bg-warning fs-6 px-3 py-2">Three.js</span>
+                            <span class="badge bg-primary fs-6 px-3 py-2">Tailwind CSS</span>
+                            <span class="badge bg-info fs-6 px-3 py-2">Framer Motion</span>
+                        </div>
+                        
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <h6 class="fw-bold mb-3">Key Features</h6>
+                                <ul class="opacity-90">
+                                    <li>Scroll-triggered animations</li>
+                                    <li>Parallax scrolling effects</li>
+                                    <li>Micro-interactions throughout</li>
+                                    <li>Advanced form validation</li>
+                                    <li>Performance optimized</li>
+                                    <li>A/B testing ready</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h6 class="fw-bold mb-3">Results</h6>
+                                <ul class="opacity-90">
+                                    <li>40%+ conversion rate increase</li>
+                                    <li>All pages load <1 second</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex gap-3 mt-5">
+                            <a href="#" class="btn btn-primary glass-card px-4 py-2 flex-fill">
+                                <i class="fas fa-external-link-alt me-2"></i>Live Demo
+                            </a>
+                            <a href="#" class="btn btn-outline-light glass-card px-4 py-2">
+                                <i class="fab fa-github me-2"></i>View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Modal 6: Food Delivery App -->
+    <div class="modal fade" id="projectModal6" tabindex="-1">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content glass-card">
+                <div class="modal-header border-0">
+                    <h3 class="modal-title fw-bold text-primary">Food Delivery App</h3>
+                    <button type="button" class="btn-close btn-close-white glass-card rounded-circle p-2" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <img src="./images/img/food app.png" class="w-100" style="height: 400px; object-fit: cover;" alt="Project Demo">
+                    <div class="p-5">
+                        <h4 class="fw-bold mb-3">Project Overview</h4>
+                        <p class="lead opacity-90 mb-4">Complete food delivery ecosystem with customer app, restaurant dashboard, driver tracking, and payment processing for multiple cities.</p>
+                        
+                        <h6 class="fw-bold text-primary mb-3">Technologies Used</h6>
+                        <div class="d-flex flex-wrap gap-2 mb-4">
+                            <span class="badge bg-danger fs-6 px-3 py-2">Next.js 14</span>
+                            <span class="badge bg-success fs-6 px-3 py-2">Stripe</span>
+                            <span class="badge bg-primary fs-6 px-3 py-2">Mapbox GL</span>
+                            <span class="badge bg-warning fs-6 px-3 py-2">Prisma ORM</span>
+                            <span class="badge bg-info fs-6 px-3 py-2">WebSockets</span>
+                        </div>
+                        
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <h6 class="fw-bold mb-3">Key Features</h6>
+                                <ul class="opacity-90">
+                                    <li>Real-time GPS driver tracking</li>
+                                    <li>Multi-restaurant ordering</li>
+                                    <li>Payment splitting & tips</li>
+                                    <li>Driver mobile application</li>
+                                    <li>Advanced restaurant dashboard</li>
+                                    <li>Review & rating system</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h6 class="fw-bold mb-3">Results</h6>
+                                <ul class="opacity-90">
+                                    <li>3x increase in order volume</li>
+                                    <li>98% on-time delivery rate</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex gap-3 mt-5">
+                            <a href="#" class="btn btn-primary glass-card px-4 py-2 flex-fill">
+                                <i class="fas fa-external-link-alt me-2"></i>Live Demo
+                            </a>
+                            <a href="#" class="btn btn-outline-light glass-card px-4 py-2">
+                                <i class="fab fa-github me-2"></i>View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Modal 7: Admin Dashboard -->
+    <div class="modal fade" id="projectModal7" tabindex="-1">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content glass-card">
+                <div class="modal-header border-0">
+                    <h3 class="modal-title fw-bold text-primary">Admin Dashboard</h3>
+                    <button type="button" class="btn-close btn-close-white glass-card rounded-circle p-2" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <img src="./images/img/admin dashbord.png" class="w-100" style="height: 400px; object-fit: cover;" alt="Project Demo">
+                    <div class="p-5">
+                        <h4 class="fw-bold mb-3">Project Overview</h4>
+                        <p class="lead opacity-90 mb-4">Enterprise-grade admin dashboard with real-time analytics, customizable charts, role-based access control, and comprehensive reporting tools.</p>
+                        
+                        <h6 class="fw-bold text-primary mb-3">Technologies Used</h6>
+                        <div class="d-flex flex-wrap gap-2 mb-4">
+                            <span class="badge bg-primary fs-6 px-3 py-2">Chart.js</span>
+                            <span class="badge bg-info fs-6 px-3 py-2">TypeScript</span>
+                            <span class="badge bg-warning fs-6 px-3 py-2">React Query</span>
+                            <span class="badge bg-success fs-6 px-3 py-2">TailwindCSS</span>
+                            <span class="badge bg-danger fs-6 px-3 py-2">Zustand</span>
+                        </div>
+                        
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <h6 class="fw-bold mb-3">Key Features</h6>
+                                <ul class="opacity-90">
+                                    <li>Real-time data visualization</li>
+                                    <li>50+ customizable chart types</li>
+                                    <li>Data export (PDF/Excel)</li>
+                                    <li>Role-based access control</li>
+                                    <li>Dark/light mode toggle</li>
+                                    <li>Drag & drop widgets</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h6 class="fw-bold mb-3">Results</h6>
+                                <ul class="opacity-90">
+                                    <li>5x faster reporting generation</li>
+                                    <li>100+ business metrics tracked</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex gap-3 mt-5">
+                            <a href="#" class="btn btn-primary glass-card px-4 py-2 flex-fill">
+                                <i class="fas fa-external-link-alt me-2"></i>Live Demo
+                            </a>
+                            <a href="#" class="btn btn-outline-light glass-card px-4 py-2">
+                                <i class="fab fa-github me-2"></i>View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Modal 8: Fitness Tracker -->
+    <div class="modal fade" id="projectModal8" tabindex="-1">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content glass-card">
+                <div class="modal-header border-0">
+                    <h3 class="modal-title fw-bold text-primary">Fitness Tracker</h3>
+                    <button type="button" class="btn-close btn-close-white glass-card rounded-circle p-2" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <img src="./images/img/fintess.png" class="w-100" style="height: 400px; object-fit: cover;" alt="Project Demo">
+                    <div class="p-5">
+                        <h4 class="fw-bold mb-3">Project Overview</h4>
+                        <p class="lead opacity-90 mb-4">Comprehensive fitness tracking application with personalized workout plans, social challenges, nutrition tracking, and integration with wearables.</p>
+                        
+                        <h6 class="fw-bold text-primary mb-3">Technologies Used</h6>
+                        <div class="d-flex flex-wrap gap-2 mb-4">
+                            <span class="badge bg-warning fs-6 px-3 py-2">Flutter 3</span>
+                            <span class="badge bg-success fs-6 px-3 py-2">Firebase</span>
+                            <span class="badge bg-primary fs-6 px-3 py-2">Riverpod</span>
+                            <span class="badge bg-danger fs-6 px-3 py-2">HealthKit</span>
+                            <span class="badge bg-info fs-6 px-3 py-2">Google Fit</span>
+                        </div>
+                        
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <h6 class="fw-bold mb-3">Key Features</h6>
+                                <ul class="opacity-90">
+                                    <li>200+ workout programs</li>
+                                    <li>Social challenges & leaderboards</li>
+                                    <li>Progress photo tracking</li>
+                                    <li>Apple Health/Google Fit sync</li>
+                                    <li>Nutrition & macro tracking</li>
+                                    <li>AI workout recommendations</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h6 class="fw-bold mb-3">Results</h6>
+                                <ul class="opacity-90">
+                                    <li>85% user retention rate</li>
+                                    <li>App Store rating: 4.7/5</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex gap-3 mt-5">
+                            <a href="#" class="btn btn-primary glass-card px-4 py-2 flex-fill">
+                                <i class="fas fa-external-link-alt me-2"></i>Live Demo
+                            </a>
+                            <a href="#" class="btn btn-outline-light glass-card px-4 py-2">
+                                <i class="fab fa-github me-2"></i>View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Modal 9: 3D Portfolio Experience -->
+    <div class="modal fade" id="projectModal9" tabindex="-1">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content glass-card">
+                <div class="modal-header border-0">
+                    <h3 class="modal-title fw-bold text-primary">3D Portfolio Experience</h3>
+                    <button type="button" class="btn-close btn-close-white glass-card rounded-circle p-2" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <img src="./images/img/3d protfolio.png" class="w-100" style="height: 400px; object-fit: cover;" alt="Project Demo">
+                    <div class="p-5">
+                        <h4 class="fw-bold mb-3">Project Overview</h4>
+                        <p class="lead opacity-90 mb-4">Immersive 3D portfolio website featuring interactive 3D models, physics simulations, custom shaders, and VR-ready WebGL experiences.</p>
+                        
+                        <h6 class="fw-bold text-primary mb-3">Technologies Used</h6>
+                        <div class="d-flex flex-wrap gap-2 mb-4">
+                            <span class="badge bg-danger fs-6 px-3 py-2">Three.js</span>
+                            <span class="badge bg-primary fs-6 px-3 py-2">GSAP 3</span>
+                            <span class="badge bg-info fs-6 px-3 py-2">React Three Fiber</span>
+                            <span class="badge bg-warning fs-6 px-3 py-2">GLSL Shaders</span>
+                            <span class="badge bg-success fs-6 px-3 py-2">Cannon.js</span>
+                        </div>
+                        
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <h6 class="fw-bold mb-3">Key Features</h6>
+                                <ul class="opacity-90">
+                                    <li>Interactive 3D project models</li>
+                                    <li>Real-time physics simulations</li>
+                                    <li>Custom GLSL fragment shaders</li>
+                                    <li>Progressive Web App (PWA)</li>
+                                    <li>VR headset support</li>
+                                    <li>Dynamic lighting system</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h6 class="fw-bold mb-3">Results</h6>
+                                <ul class="opacity-90">
+                                    <li>Sustained 60fps performance</li>
+                                    <li>Full WebGL2 feature support</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex gap-3 mt-5">
+                            <a href="#" class="btn btn-primary glass-card px-4 py-2 flex-fill">
+                                <i class="fas fa-external-link-alt me-2"></i>Live Demo
+                            </a>
+                            <a href="#" class="btn btn-outline-light glass-card px-4 py-2">
+                                <i class="fab fa-github me-2"></i>View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" class="btn glass-card rounded-circle shadow-lg" style="position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; z-index: 1000; display: none;" title="Back to Top">
+        <i class="fas fa-chevron-up fs-4"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="py-5 mt-auto glass-card mx-5 mx-md-0">
+        <div class="container text-center opacity-75">
+            &copy; 2024 Mahmoud. All rights reserved. Made with <i class="fas fa-heart text-danger"></i> using modern web technologies.
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        // Project filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const projectItems = document.querySelectorAll('.project-item');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Update active button
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    
+                    const filterValue = btn.getAttribute('data-filter');
+                    
+                    projectItems.forEach(item => {
+                        const categories = item.getAttribute('data-categories');
+                        
+                        if (filterValue === 'all' || categories.includes(filterValue)) {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                            item.style.display = 'block';
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'scale(0.9)';
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Project modal triggers
+            projectItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const modalId = item.getAttribute('data-target');
+                    const modal = new bootstrap.Modal(document.querySelector(modalId));
+                    modal.show();
+                });
+            });
+        });
+    </script>
+</body>
+</html>

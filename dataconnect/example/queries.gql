@@ -1,0 +1,59 @@
+query ListAllPortfolios @auth(level: USER, insecureReason: "This operation is safe to expose to all logged in users.") {
+  portfolios {
+    id
+    name
+    description
+    user {
+      username
+      displayName
+    }
+  }
+}
+
+mutation CreateNewProject($portfolioId: UUID!, $title: String!, $description: String, $isPublic: Boolean, $tags: [String!]) @auth(level: USER) {
+  project_insert(data: {
+    portfolioId: $portfolioId,
+    title: $title,
+    description: $description,
+    isPublic: $isPublic,
+    tags: $tags,
+    createdAt_expr: "request.time"
+  })
+}
+
+query GetProjectDetails($projectId: UUID!) @auth(level: USER, insecureReason: "This operation is safe to expose to all logged in users.") {
+  project(id: $projectId) {
+    id
+    title
+    description
+    isPublic
+    createdAt
+    tags
+    portfolio {
+      id
+      name
+      user {
+        username
+      }
+    }
+    mediaItems_on_project {
+      id
+      mediaUrl
+      mediaType
+      caption
+      orderIndex
+      isFeatured
+    }
+  }
+}
+
+mutation RecordPageView($portfolioId: UUID!, $projectId: UUID, $eventType: String!) @auth(level: PUBLIC, insecureReason: "This operation is safe to expose to the public") {
+  analyticsEvent_insert(data: {
+    portfolioId: $portfolioId,
+    projectId: $projectId,
+    eventType: $eventType,
+    timestamp_expr: "request.time",
+    viewerIpAddress_expr: "request.headers.get('x-forwarded-for') ?? request.source.ip",
+    viewerUserAgent_expr: "request.headers.get('user-agent')"
+  })
+}

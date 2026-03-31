@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Mahmoud | Modern Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+    <link href="css/light-theme.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+</head>
+<body data-theme="dark">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="index.html">
+                <i class="fas fa-rocket me-2"></i>Mahmoud
+            </a>
+            <button class="navbar-toggler glass-card p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+                <i class="fas fa-bars text-light fs-4"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link glass-card px-4 py-2 mx-2 rounded-pill" href="index.html#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link glass-card px-4 py-2 mx-2 rounded-pill" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link glass-card px-4 py-2 mx-2 rounded-pill" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active glass-card px-4 py-2 mx-2 rounded-pill" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button id="theme-toggle" class="btn glass-card ms-2 p-2 rounded-circle" title="Toggle Theme">
+                            <i class="fas fa-sun fs-5" id="theme-icon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero -->
+    <section class="min-vh-100 d-flex align-items-center py-5" style="padding-top: 100px; background: linear-gradient(135deg, var(--bg-dark) 0%, var(--hero-bg) 100%);">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0 text-center text-lg-start">
+                    <h1 class="display-2 fw-bold mb-4 text-white drop-shadow" data-aos="fade-right">
+                        Let's Create Something <span class="text-primary">Amazing</span> Together
+                    </h1>
+                    <p class="lead fs-3 opacity-90 mb-4" data-aos="fade-right" data-aos-delay="200">
+                        Ready to bring your vision to life? I'm available for new projects and collaborations.
+                    </p>
+                    <div class="d-flex gap-3 flex-wrap" data-aos="fade-right" data-aos-delay="400">
+                        <a href="#contact-form" class="btn btn-lg glass-card px-5 py-3 text-light shadow-lg fs-5">
+                            <i class="fas fa-paper-plane me-2"></i>Send Message
+                        </a>
+                        <a href="kajo8390@gmail.com" class="btn btn-outline-light btn-lg glass-card px-5 py-3 shadow-lg fs-5">
+                            <i class="fas fa-envelope me-2"></i>kajo8390@gmail.com
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="glass-card p-5 shadow-lg mx-auto" style="max-width: 500px;">
+                        <img src="./images/corporate-website-abstract-concept-illustration_335657-1831.avif" class="rounded-4 w-100 shadow-lg" alt="Contact illustration" style="height: 400px; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact-form" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="glass-card p-4 shadow-sm">
+                            <h5 class="fw-bold mb-4 text-light text-center">Send Message</h5>
+                            <form id="contactForm">
+                                <div class="row g-3">
+                                    <div class="col-12">
+                                        <label class="form-label fw-semibold text-light">Full Name</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text glass-card border-0">
+                                                <i class="fas fa-user text-primary"></i>
+                                            </span>
+                                            <input type="text" class="form-control glass-card border-0 shadow-sm text-light" id="name" placeholder="Your Full Name" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label fw-semibold text-light">Email</label>
+                                            <div class="input-group mb-3">
+                                                <span class="input-group-text glass-card border-0">
+                                                    <i class="fas fa-envelope text-secondary"></i>
+                                                </span>
+                                                <input type="email" class="form-control glass-card border-0 shadow-sm text-light" id="email" placeholder="your@email.com" required>
+                                            </div>
+                                        
+                                        <div class="col-12 mb-3">
+                                            <label for="subject" class="form-label fw-bold text-light fs-5">Subject</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text glass-card border-0">
+                                                    <i class="fas fa-tag text-accent"></i>
+                                                </span>
+                                                <input type="text" class="form-control glass-card border-0 bg-transparent text-light fs-6" id="subject" placeholder="Project brief or inquiry" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="message" class="form-label fw-bold text-light fs-5">Your Message</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text glass-card border-0">
+                                                    <i class="fas fa-comment-dots text-success"></i>
+                                                </span>
+                                                <textarea class="form-control glass-card border-0 bg-transparent text-light fs-6" id="message" rows="6" placeholder="Tell me about your project..." required></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center mt-3 mb-3">
+                                        <button type="submit" class="btn btn-lg glass-card px-6 py-3 text-light shadow-lg fs-5" style="min-width: 200px;">
+                                            <i class="fas fa-paper-plane me-2"></i>Send Message
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-lg-5 " style="width: auto;">
+                                <div class="glass-card p-5 shadow-lg h-100">
+                                    <h3 class="fw-bold mb-4 text-light"><i class="fas fa-info-circle me-2 text-primary"></i>Or Contact Me Directly</h3>
+                                    <div class="contact-item mb-4 p-4 glass-card rounded-3">
+                                        <div class="d-flex align-items-center">
+                                            <div class="contact-icon glass-card rounded-circle d-flex align-items-center justify-content-center me-4 shadow-sm" style="width: 60px; height: 60px;">
+                                                <i class="fas fa-map-marker-alt text-primary fs-5"></i>
+                                            </div>
+                                            <div>
+                                                <h6 class="fw-bold text-light mb-1">Location</h6>
+                                                <p class="mb-0 opacity-90">Cairo, Egypt<br><small class="opacity-75">Available for remote work worldwide</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="contact-item mb-4 p-4 glass-card rounded-3">
+                                        <div class="d-flex align-items-center">
+                                            <div class="contact-icon glass-card rounded-circle d-flex align-items-center justify-content-center me-4 shadow-sm" style="width: 60px; height: 60px;">
+                                                <i class="fas fa-phone text-success fs-5"></i>
+                                            </div>
+                                            <div>
+                                                <h6 class="fw-bold text-light mb-1">Phone</h6>
+                                                <p class="mb-0 opacity-90">+20 100 841 9929</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="contact-item p-4 glass-card rounded-3">
+                                        <div class="d-flex align-items-center">
+                                            <div class="contact-icon glass-card rounded-circle d-flex align-items-center justify-content-center me-4 shadow-sm" style="width: 60px; height: 60px;">
+                                                <i class="fas fa-envelope text-accent fs-5"></i>
+                                            </div>
+                                            <div>
+                                                <h6 class="fw-bold text-light mb-1">Email</h6>
+                                                <a href="mailto:mahmoud@example.com" class="text-primary opacity-90 fs-5 text-decoration-none">kajo8390@gmail.com</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Maps -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 display-5 fw-bold text-light" data-aos="fade-up">Find Me Here</h2>
+            <div class="glass-card shadow-lg overflow-hidden" data-aos="zoom-in">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3450.123456789!2d31.235712!3d30.044419999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583e0c4d7b5b0b%3A0x4b7c3e5f8b0a1c2d!2sCairo%2C%20Egypt!5e0!3m2!1sen!2sus!4v1699999999999" 
+                        class="w-100" style="height: 500px; border: 0; border-radius: 20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Links Grid - Fixed -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 display-5 fw-bold text-light" data-aos="fade-up">Connect With Me</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <a href="https://linkedin.com/in/mahmoud-hatem-a37986337" class="glass-card h-100 p-3 p-md-4 p-lg-5 text-center shadow-lg text-decoration-none hover-scale transition-all d-inline-block w-100" 
+                       title="LinkedIn Profile" aria-label="Connect on LinkedIn" rel="noopener noreferrer" role="link">
+                        <i class="fab fa-linkedin display-2 fs-1 text-primary mb-3 icon-pulse" role="img" aria-hidden="true"></i>
+                        <h4 class="fw-bold text-light mb-2">LinkedIn</h4>
+                        <p class="opacity-90 mb-0 small">Connect for opportunities</p>
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="150">
+                    <a href="https://github.com/kajo8390-cloud" class="glass-card h-100 p-3 p-md-4 p-lg-5 text-center shadow-lg text-decoration-none hover-scale transition-all d-inline-block w-100" 
+                       title="GitHub Profile" aria-label="View GitHub" rel="noopener noreferrer" role="link">
+                        <i class="fab fa-github display-2 fs-1 text-secondary mb-3 icon-pulse" role="img" aria-hidden="true"></i>
+                        <h4 class="fw-bold text-light mb-2">GitHub</h4>
+                        <p class="opacity-90 mb-0 small">Open source contributions</p>
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <a href="https://x.com/micro_js" class="glass-card h-100 p-3 p-md-4 p-lg-5 text-center shadow-lg text-decoration-none hover-scale transition-all d-inline-block w-100" 
+                       title="X Profile (formerly Twitter)" aria-label="Follow on X" rel="noopener noreferrer" role="link">
+                        <i class="fab fa-x-twitter display-2 fs-1 text-info mb-3 icon-pulse" role="img" aria-hidden="true"></i>
+                        <h4 class="fw-bold text-light mb-2">X</h4>
+                        <p class="opacity-90 mb-0 small">Tech updates & thoughts</p>
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="250">
+                    <a href="https://instagram.com/memo_off9" class="glass-card h-100 p-3 p-md-4 p-lg-5 text-center shadow-lg text-decoration-none hover-scale transition-all d-inline-block w-100" 
+                       title="Instagram Profile" aria-label="Follow on Instagram" rel="noopener noreferrer" role="link">
+                        <i class="fab fa-instagram display-2 fs-1" style="background: linear-gradient(45deg, #f09, #f44, #e1306c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent;" class="mb-3 icon-pulse" role="img" aria-hidden="true"></i>
+                        <h4 class="fw-bold text-light mb-2">Instagram</h4>
+                        <p class="opacity-90 mb-0 small">Design & projects</p>
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 mb-3 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <a href="https://wa.me/201008419929" class="glass-card h-100 p-3 p-md-4 p-lg-5 text-center shadow-lg text-decoration-none hover-scale transition-all d-inline-block w-100" 
+                       title="WhatsApp Business" aria-label="Message on WhatsApp" rel="noopener noreferrer" role="link">
+                        <i class="fab fa-whatsapp display-2 fs-1 text-success mb-3 icon-pulse" role="img" aria-hidden="true"></i>
+                        <h4 class="fw-bold text-light mb-2">WhatsApp</h4>
+                        <p class="opacity-90 mb-0 small">Quick response</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" class="btn glass-card rounded-circle shadow-lg" style="position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; z-index: 1000; display: none;" title="Back to Top">
+        <i class="fas fa-chevron-up fs-4"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="py-5 mt-auto glass-card mx-5 mx-md-0">
+        <div class="container text-center opacity-75">
+            &copy; 2024 Mahmoud. All rights reserved. Made with <i class="fas fa-heart text-danger"></i> using modern web technologies.
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
